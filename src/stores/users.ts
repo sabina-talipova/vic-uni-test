@@ -17,7 +17,7 @@ export const useUserStore = defineStore('users', {
     length: (state) => state.rawUsers.length,
   },
   actions: {
-    async getData(num: Number = 3) {
+    async getData(num: Number = 6) {
       this.isLoading = true
       this.error = null
       try {
