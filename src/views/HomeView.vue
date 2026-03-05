@@ -5,7 +5,7 @@ import HeroBlock from '@/components/HeroBlock/HeroBlock.vue'
 
 <template>
   <main
-    class="flex flex-col justify-center px-6 sm:mx-auto sm:max-w-2/3 w-full mt-6 mb-6 min-h-screen"
+    class="flex flex-col justify-center px-6 md:mx-auto md:max-w-2/3 w-full mt-6 mb-6 min-h-screen"
   >
     <HeroBlock />
     <FeaturedBlock />

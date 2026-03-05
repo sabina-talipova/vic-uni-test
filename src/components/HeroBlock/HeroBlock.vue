@@ -1,6 +1,11 @@
 <template>
   <div class="flex flex-col xl:grid xl:grid-cols-8 gap-6 xl:gap-24 content-center mt-6 mb-6">
-    <div :class="[position == 'left' ? 'order-last xl:order-first' : 'order-last', 'col-span-3']">
+    <div
+      :class="[
+        position == 'left' ? 'order-last xl:order-first' : 'order-last',
+        'col-span-3 mt-12 xl:mt-0',
+      ]"
+    >
       <h1 class="max-w-3xl mb-8 mx-auto">
         <div class="leading-tight tracking-tight heading-1">
           <span class="text-[#0d4c38] heading-1">Bachelor of </span>
@@ -32,7 +37,7 @@
     </div>
     <div class="w-full flex flex-col relative self-start col-span-5">
       <div
-        class="w-full h-[300px] banner-image xl:rounded-tl-[2vw] xl:rounded-br-[2vw]"
+        class="w-full h-[300px] banner-image md:rounded-tl-[2vw] md:rounded-br-[2vw]"
         :style="[
           position == 'left'
             ? 'background-image: url(https://www.wgtn.ac.nz/__data/assets/image/0009/2066580/students-lecture-2000x800.jpg);'
@@ -41,8 +46,8 @@
       ></div>
       <div
         :class="[
-          position == 'left' ? 'xl:-left-12' : 'xl:-right-12',
-          'flex-1 relative xl:-bottom-12 xl:absolute bg-[#0d4c38] p-6 xl:w-[500px] flex flex-col justify-between xl:rounded-tl-[2vw] xl:rounded-br-[2vw]',
+          position == 'left' ? 'md:-left-12' : 'md:-right-12',
+          'flex-1 relative md:-bottom-12 md:absolute bg-[#0d4c38] p-6 md:w-[500px] flex flex-col justify-between md:rounded-tl-[2vw] md:rounded-br-[2vw]',
         ]"
       >
         <div class="banner-title">
