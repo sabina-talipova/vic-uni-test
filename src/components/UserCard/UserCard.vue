@@ -49,7 +49,7 @@
             <rect x="2" y="4" width="20" height="16" rx="2" />
           </svg>
         </span>
-        <span>{{ person?.email }}</span>
+        <span class="email_block">{{ person?.email }}</span>
       </a>
       <a
         class="text-sm hover:underline flex flex-row gap-3 highlight"
@@ -86,31 +86,19 @@ defineProps<{
 }>()
 </script>
 <style lang="css">
-.student_title,
+.student_title span,
 .student_subtitle {
-  display: block;
-  max-width: 250px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: var(--color-primary-green);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 12px;
 }
 .student_title span {
-  color: var(--color-primary-green);
   font-size: 26px;
-  font-family: Inter, Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  line-height: 1.25;
-  word-break: keep-all;
-  margin-bottom: 12px;
 }
-
 .student_subtitle {
-  color: var(--color-primary-green);
   font-size: 16px;
-  word-break: keep-all;
-  font-family: Inter, Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  line-height: 1.25;
-  margin-bottom: 12px;
 }
 
 .highlight {
@@ -120,15 +108,16 @@ defineProps<{
   width: fit-content;
   border-radius: 50px;
   align-items: center;
-  max-width: 250px;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .highlight:not(:last-of-type) {
   margin-bottom: 6px;
 }
-.highlight span {
-  word-break: normal;
+
+.email_block {
+  width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 425px) {
