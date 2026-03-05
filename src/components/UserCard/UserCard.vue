@@ -1,13 +1,13 @@
 <template>
   <li
-    class="flex flex-col md:flex-row gap-6 content-start border border-gray-100 hover:shadow-md p-6"
+    class="flex flex-col md:flex-row gap-6 content-start border border-gray-100 hover:shadow-md p-6 overflow-hidden"
   >
-    <div class="w-32">
+    <div class="w-32 flex-none">
       <div
         class="block focus:outline-none transition-all shadow-gray-300/20 shadow-lg hover:shadow-xl"
       >
-        <div class="">
-          <div class="aspect-square bg-gray-200 relative overflow-hidden">
+        <div class="w-full">
+          <div class="bg-gray-200 relative overflow-hidden">
             <img
               loading="lazy"
               :alt="`${person?.name?.first} ${person?.name?.last}` || 'user'"
