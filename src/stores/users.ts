@@ -15,6 +15,7 @@ export const useUserStore = defineStore('users', {
   getters: {
     users: (state) => state.rawUsers,
     length: (state) => state.rawUsers.length,
+    loading: (state) => state.isLoading,
   },
   actions: {
     async getData(num: Number = 6) {
@@ -38,6 +39,7 @@ export const useUserStore = defineStore('users', {
               country: user.location.country,
               city: user.location.city,
               email: user.email,
+              phone: user.phone,
               image: user.picture.large,
             }),
           )

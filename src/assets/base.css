@@ -33,6 +33,13 @@
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
+  --color-yellow: #fce500;
+  --color-primary-green: #0d4c38;
+  --color-secondary-green: #669787;
+  --color-light-green: #99b9af;
+  --color-light-green-2: #d4e2dc;
+  --color-light-gray: #ccc;
+
   --section-gap: 160px;
 }
 
@@ -74,6 +81,8 @@ body {
     Oxygen,
     Ubuntu,
     Cantarell,
+    Arial,
+    Helvetica,
     'Fira Sans',
     'Droid Sans',
     'Helvetica Neue',

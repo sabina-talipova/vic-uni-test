@@ -9,5 +9,6 @@ export interface Person {
   country: string
   city: string
   email: string
+  phone: string
   image: string
 }
