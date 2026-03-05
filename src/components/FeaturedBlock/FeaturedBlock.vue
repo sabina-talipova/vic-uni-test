@@ -34,11 +34,18 @@ const items = [
   },
 ]
 </script>
+<style lang="css">
+.heading-3 {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--color-text);
+}
+</style>
 
 <template>
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center my-16">
-      <h2 class="text-3xl lg:text-4xl font-black text-slate-900 mb-8">Our Core Values</h2>
+      <h2 class="text-3xl lg:text-4xl font-black text-slate-900 mb-8 heading-3">Our Core Values</h2>
     </div>
     <div class="flex flex-col xl:flex-row gap-6 xl:gap-24 content-center my-24">
       <FeaturedItem v-for="(item, index) in items" :key="index" :item="item" />

@@ -1,13 +1,13 @@
 <template>
   <li
-    class="flex flex-col md:flex-row gap-6 content-start border border-gray-100 hover:shadow-md p-6 overflow-hidden"
+    class="flex flex-col xl:flex-wrap xl:flex-row gap-6 xl:gap-12 xl:items-center content-start border border-gray-100 hover:shadow-md p-6"
   >
     <div class="w-32 flex-none">
       <div
-        class="block focus:outline-none transition-all shadow-gray-300/20 shadow-lg hover:shadow-xl"
+        class="block focus:outline-none transition-all shadow-gray-300/20 shadow-lg hover:shadow-xl rounded-full"
       >
         <div class="w-full">
-          <div class="bg-gray-200 relative overflow-hidden">
+          <div class="bg-gray-200 relative overflow-hidden rounded-full">
             <img
               loading="lazy"
               :alt="`${person?.name?.first} ${person?.name?.last}` || 'user'"
@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <div class="text-left">
+    <div class="text-left flex-1">
       <h3 class="student_title">
         <span>
           {{ person?.name?.title }}
@@ -86,18 +86,27 @@ defineProps<{
 }>()
 </script>
 <style lang="css">
+.student_title,
+.student_subtitle {
+  display: block;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .student_title span {
   color: var(--color-primary-green);
   font-size: 26px;
   font-family: Inter, Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.25;
+  word-break: keep-all;
   margin-bottom: 12px;
 }
 
 .student_subtitle {
   color: var(--color-primary-green);
   font-size: 16px;
+  word-break: keep-all;
   font-family: Inter, Arial, Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.25;
@@ -105,12 +114,26 @@ defineProps<{
 }
 
 .highlight {
-  padding: 0.2rem 0.5rem;
+  padding: 0.5rem 1rem;
   background-color: var(--color-light-green-2);
   color: var(--color-primary-green);
   width: fit-content;
+  border-radius: 50px;
+  align-items: center;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .highlight:not(:last-of-type) {
   margin-bottom: 6px;
+}
+.highlight span {
+  word-break: normal;
+}
+
+@media screen and (max-width: 425px) {
+  .highlight {
+    font-size: 12px;
+  }
 }
 </style>

@@ -14,7 +14,7 @@
       </div>
       <RouterLink
         to="our-students"
-        class="mt-12 flex justify-between items-center w-[200px] bg-gray-600 text-white font-bold text-lg hover:bg-gray-500 button-primary py-[5px] px-[12px]"
+        class="flex justify-between items-center w-[200px] bg-gray-600 text-white font-bold text-lg hover:bg-gray-500 button-primary py-[10px] px-[20px] rounded-full my-6"
       >
         <span>Learn more</span>
         <span>
@@ -46,7 +46,7 @@
         ]"
       >
         <div class="banner-title">
-          <h2>Current students</h2>
+          <h2>Our students</h2>
         </div>
         <div class="banner-text">
           <p>Find information and resources to support you throughout your studies.</p>

@@ -2,10 +2,12 @@
   <header class="">
     <Disclosure
       as="nav"
-      class="flex flex-col justify-content-center mx-auto w-full w-full bg-[#f7f7f7] py-3"
+      class="flex flex-col justify-content-center mx-auto w-full w-full bg-[#f7f7f7] py-6"
       v-slot="{ open }"
     >
-      <div class="flex flex-row sm:flex-col justify-center relative sm:mx-auto sm:max-w-2/3 w-full">
+      <div
+        class="flex flex-row items-center justify-center relative sm:mx-auto sm:max-w-2/3 w-full"
+      >
         <div class="flex items-center sm:hidden">
           <!-- Mobile menu button-->
           <DisclosureButton
@@ -26,11 +28,11 @@
               />
             </RouterLink>
           </div>
-          <div class="hidden sm:flex flex-1 pl-[16px] divider-left">
+          <!-- <div class="hidden sm:flex flex-1 pl-[16px] divider-left">
             <span class="page-title items-center">
               {{ route.name }}
             </span>
-          </div>
+          </div> -->
         </div>
         <div class="hidden sm:block">
           <div class="flex space-x-4 gap-2">
@@ -40,8 +42,8 @@
                 :class="[
                   route.path === item.href
                     ? 'active'
-                    : 'text-gray-600 hover:bg-[#004b34] hover:text-white',
-                  'block px-3 py-2 text-base font-medium relative',
+                    : 'text-gray-600 hover:bg-[#004b34] hover:text-white hover:rounded-full',
+                  'block px-6 py-3 text-base font-medium relative',
                 ]"
                 :aria-current="route.path === item.href ? 'page' : undefined"
                 >{{ item.name }}</RouterLink
@@ -90,7 +92,7 @@ const navigation = [
   display: block;
   content: '';
   width: 100%;
-  height: 6px;
+  height: 4px;
   background: linear-gradient(
     90deg,
     var(--color-primary-green) 0%,
