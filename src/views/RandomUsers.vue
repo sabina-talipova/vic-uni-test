@@ -61,12 +61,7 @@ const getNewUsers = () => {
     </div>
     <div class="">
       <ul class="grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-6 w-full sm:w-auto">
-        <UserCard
-          v-for="person in users.rawUsers"
-          :key="person.email"
-          :person="person"
-          @add="users.addItem(person)"
-        />
+        <UserCard v-for="person in users.rawUsers" :key="person.email" :person="person" />
       </ul>
     </div>
     <!-- <div class="flex justify-center pt-12">Loaded: {{ users.length }}</div> -->
