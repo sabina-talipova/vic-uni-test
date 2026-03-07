@@ -1,6 +1,7 @@
 <template>
   <li
-    class="flex flex-col xl:flex-wrap xl:flex-row gap-6 xl:gap-12 xl:items-center content-start border border-gray-100 hover:shadow-md p-6"
+    @click="emit('open', person)"
+    class="rounded-2xl bg-white flex flex-col xl:flex-wrap xl:flex-row gap-6 xl:gap-12 xl:items-center content-start border border-gray-100 hover:shadow-lg p-6"
   >
     <div class="w-32 flex-none">
       <div
@@ -81,9 +82,11 @@
 <script setup lang="ts">
 import type { Person } from '@/types'
 
-defineProps<{
+const props = defineProps<{
   person?: Person
 }>()
+
+const emit = defineEmits(['open'])
 </script>
 <style lang="css">
 .student_title span,

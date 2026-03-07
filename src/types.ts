@@ -12,3 +12,15 @@ export interface Person {
   phone: string
   image: string
 }
+
+export interface Subtitle {
+  main: string
+  emphasis: string
+}
+
+export interface Content {
+  title: string
+  subtitle: Subtitle
+  description: string
+  image?: string
+}
