@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
-import UserCard from '../UserCard/UserCard.vue'
+import UserCard from '@/components/WebApp/UserCard.vue'
 
 describe('UserCard', () => {
   it('renders properly with person data', () => {

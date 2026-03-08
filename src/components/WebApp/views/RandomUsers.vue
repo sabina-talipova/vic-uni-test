@@ -4,7 +4,7 @@ import UserCard from '@/components/WebApp/UserCard.vue'
 import UserModal from '@/components/WebApp/UserModal.vue'
 
 import { useUserStore } from '../../../stores/users'
-import Loader from '@/components/Loader.vue'
+import Loader from '@/components/WebApp/Loader.vue'
 import { useRoute } from 'vue-router'
 
 const users = useUserStore()

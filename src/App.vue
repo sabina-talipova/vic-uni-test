@@ -1,18 +1,8 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import SideBar from './components/WebApp/SideBar.vue'
-import NavBar from './components/WebApp/NavBar.vue'
-
-// import NavBar from './components/NavBar/NavBar.vue'
-// import Footer from './components/Footer/Footer.vue'
+import SideBar from '@/components/WebApp/SideBar.vue'
+import NavBar from '@/components/WebApp/NavBar.vue'
 </script>
-
-<!-- <template>
-  <NavBar />
-  <RouterView />
-  <Footer />
-</template> -->
-
 <template>
   <div
     class="relative isolate flex min-h-svh w-full bg-white max-lg:flex-col lg:bg-zinc-100 dark:bg-zinc-900 dark:lg:bg-zinc-950"

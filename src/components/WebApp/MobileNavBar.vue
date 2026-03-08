@@ -5,18 +5,11 @@ import { Home, User, Users, Settings } from 'lucide-vue-next'
 const currentPath = ref('/')
 
 const navigation = [
-  { name: 'Home', href: '/', icon: 'Home' },
-  { name: 'Our students', href: '/our-students', icon: 'User' },
-  { name: 'Our tutors', href: '/our-tutors', icon: 'Users' },
-  { name: 'Settings', href: '/settings', icon: 'Settings' },
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Our students', href: '/our-students', icon: User },
+  { name: 'Our tutors', href: '/our-tutors', icon: Users },
+  { name: 'Settings', href: '/settings', icon: Settings },
 ]
-
-const icons = {
-  Home,
-  Settings,
-  User,
-  Users,
-}
 
 defineProps<{
   isOpen: Boolean
@@ -41,7 +34,7 @@ const emit = defineEmits(['close'])
             ]"
             :aria-current="route.path === item.href ? 'page' : undefined"
           >
-            <component :is="icons[item.icon]" class="w-4 h-4 mr-2" />
+            <component :is="item.icon" class="w-4 h-4 mr-2" />
             {{ item.name }}
           </RouterLink>
         </div>
